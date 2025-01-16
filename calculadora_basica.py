@@ -1,17 +1,32 @@
-operacion = input('Dime que operación quieres hacer:\n1)Suma\n2)Resta\n3)Multiplicación\n4)División\n---> ')
-operacion = int(operacion)
-number1 = int(input('Dime el primero número: '))
-number2 = int(input('Dime el segundo número: '))
 
-def calculadora():
-    if operacion == 1:
-        print(f'Tu resultado es: {number1 + number2}')
-    elif operacion == 2:
-        print(f'Tu resultado es: {number1 - number2}')
-    elif operacion == 3:
-        print(f'Tu resultado es: {number1 * number2}')
-    elif operacion == 4:
-        print(f'Tu resultado es: {number1 / number2}')
-    else:
-        print('Hubo un error')
+a = int(input('Introduce el primer numero: '))
+b = int(input('Introduce el segundo numero: '))
+c = 0
 
+
+print(''' 
+Que operación quieres hacer:
+
+1)Sumar
+2)Restar
+3)Multiplicar
+4)Dividir
+5)Salir
+''')
+
+operacion = int(input('-->'))
+
+if operacion ==1:
+    c = a + b
+    print(f'El resultado de {a} + {b} es {c}')
+if operacion ==2:
+    c = a + b
+    print(f'El resultado de {a} - {b} es {c}')
+if operacion ==3:
+    c = a + b
+    print(f'El resultado de {a} * {b} es {c}')
+if operacion ==4:
+    c = a + b
+    print(f'El resultado de {a} / {b} es {c}')
+if operacion ==5:
+    print('QUE')
