@@ -1,8 +1,13 @@
 
 a = int(input('Introduce el primer numero: '))
 b = int(input('Introduce el segundo numero: '))
-c = 0
 
+operadores = {
+    '1' : lambda a,b: a+b,
+    '2' : lambda a,b: a-b,
+    '3' : lambda a,b: a*b,
+    '4' : lambda a,b: a/b if b != 0 else 'Estas diviendo por 0'
+}
 
 print(''' 
 Que operación quieres hacer:
@@ -14,19 +19,9 @@ Que operación quieres hacer:
 5)Salir
 ''')
 
-operacion = int(input('-->'))
+operador = (input('--> '))
 
-if operacion ==1:
-    c = a + b
-    print(f'El resultado de {a} + {b} es {c}')
-if operacion ==2:
-    c = a + b
-    print(f'El resultado de {a} - {b} es {c}')
-if operacion ==3:
-    c = a + b
-    print(f'El resultado de {a} * {b} es {c}')
-if operacion ==4:
-    c = a + b
-    print(f'El resultado de {a} / {b} es {c}')
-if operacion ==5:
-    print('QUE')
+
+
+resultado = operadores[operador](a,b)
+print(f'El resultado es {resultado}')
