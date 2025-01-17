@@ -9,6 +9,13 @@ operadores = {
     '4' : lambda a,b: a/b if b != 0 else 'Estas diviendo por 0'
 }
 
+operadores2 = {
+    '1': '+',
+    '2': '-',
+    '3': '*',
+    '4': '/'
+}
+
 print(''' 
 Que operación quieres hacer:
 
@@ -24,4 +31,4 @@ operador = (input('--> '))
 
 
 resultado = operadores[operador](a,b)
-print(f'El resultado es {resultado}')
+print(f'El resultado de {a} {operadores2[operador]} {b} es {resultado}')
